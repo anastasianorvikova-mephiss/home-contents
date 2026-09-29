@@ -1,0 +1,48 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#F5F5F5"/>
+<g id="1440">
+<rect width="1440" height="9486" transform="translate(-924 -3818)" fill="white"/>
+<g id="Content">
+<g id="Scroll-content">
+<g id="Content_2">
+<g id="Covered">
+<rect width="1440" height="1572" transform="translate(-924 -852)" fill="white"/>
+<g id="Body">
+<g id="covers list">
+<g id="Frame 1">
+<g id="Card covers v1.0">
+<path d="M-24 -5.72205e-06C-24 -13.2548 -13.2548 -24 0 -24H282C295.255 -24 306 -13.2548 306 0V252C306 265.255 295.255 276 282 276H-3.8147e-06C-13.2548 276 -24 265.255 -24 252V-5.72205e-06Z" fill="#F5F5FF"/>
+<g id="policyholder injury" clip-path="url(#clip0_35386_82299)">
+<g id="Protection">
+<circle id="Circle" cx="34.1869" cy="8.58143" r="5.58143" fill="#6568F4"/>
+<foreignObject x="3.78914" y="2.46895" width="40.701" height="43.7706"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(1.03px);clip-path:url(#bgblur_1_35386_82299_clip_path);height:100%;width:100%"></div></foreignObject><path id="Shield" data-figma-bg-blur-radius="2.06084" d="M6 11.672C6 10.2767 7.1949 9.17898 8.58924 9.29327C13.4875 9.69478 18.3659 8.31414 22.3226 5.40657L22.6454 5.16943C23.534 4.51644 24.7453 4.51644 25.634 5.16943L25.9567 5.40657C29.9134 8.31414 34.7918 9.69478 39.6901 9.29327C41.0844 9.17898 42.2793 10.2767 42.2793 11.672V24.5673C42.2793 30.6397 38.9741 36.2334 33.6476 39.1754L25.4918 43.6803C24.6506 44.1449 23.6288 44.1449 22.7876 43.6803L14.6317 39.1754C9.30525 36.2334 6 30.6397 6 24.5674V11.672Z" fill="url(#paint0_linear_35386_82299)" fill-opacity="0.8" stroke="url(#paint1_linear_35386_82299)" stroke-width="0.3"/>
+<g id="Union">
+<path d="M24.1395 21.4234C26.2973 21.4234 28.0465 19.6742 28.0465 17.5164C28.0465 15.3586 26.2973 13.6094 24.1395 13.6094C21.9817 13.6094 20.2325 15.3586 20.2325 17.5164C20.2325 19.6742 21.9817 21.4234 24.1395 21.4234Z" fill="white"/>
+<path d="M32.5939 29.2789C33.3836 31.1528 31.6747 32.8653 29.6469 32.8653H18.6321C16.6043 32.8653 14.8954 31.1528 15.6851 29.2789C16.1414 28.1962 16.8044 27.2007 17.649 26.3533C19.3704 24.6262 21.7051 23.656 24.1395 23.656C26.5739 23.656 28.9086 24.6262 30.63 26.3533C31.4746 27.2007 32.1376 28.1962 32.5939 29.2789Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="bgblur_1_35386_82299_clip_path" transform="translate(-3.78914 -2.46895)"><path d="M6 11.672C6 10.2767 7.1949 9.17898 8.58924 9.29327C13.4875 9.69478 18.3659 8.31414 22.3226 5.40657L22.6454 5.16943C23.534 4.51644 24.7453 4.51644 25.634 5.16943L25.9567 5.40657C29.9134 8.31414 34.7918 9.69478 39.6901 9.29327C41.0844 9.17898 42.2793 10.2767 42.2793 11.672V24.5673C42.2793 30.6397 38.9741 36.2334 33.6476 39.1754L25.4918 43.6803C24.6506 44.1449 23.6288 44.1449 22.7876 43.6803L14.6317 39.1754C9.30525 36.2334 6 30.6397 6 24.5674V11.672Z"/>
+</clipPath><linearGradient id="paint0_linear_35386_82299" x1="-2.47992" y1="-10.7716" x2="39.6847" y2="57.8236" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6568F4"/>
+<stop offset="1" stop-color="#F0F0FE"/>
+</linearGradient>
+<linearGradient id="paint1_linear_35386_82299" x1="26.3301" y1="-14.38" x2="21.4286" y2="65.3633" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6568F4"/>
+<stop offset="1" stop-color="#E7E7FF"/>
+</linearGradient>
+<clipPath id="clip0_35386_82299">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

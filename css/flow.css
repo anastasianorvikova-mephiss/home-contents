@@ -1,0 +1,420 @@
+/* ---------------------------------------------------------------
+   Quote flow — the screens after the landing.
+   Frame "1 step" 35665:99718 (1440x542).
+   Loaded after components.css, which still supplies Button and Link.
+   --------------------------------------------------------------- */
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--colorBgSrfSecondary);
+}
+
+/* ---------------------------------------------------------------
+   Header-flow-v1.1 — 96px, logo left, progress centred on the page
+   --------------------------------------------------------------- */
+.flow-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 96px;
+  padding: 36px var(--spacing-11);
+  background-color: var(--colorBgSrfSecondary);
+}
+
+.flow-header__logo {
+  display: block;
+  /* The optical alignment container in the design nudges the mark down 4px */
+  position: relative;
+  top: 4px;
+  width: 76px;
+  height: 24px;
+}
+
+/* Pinned to the page rather than laid out next to the logo, so it stays
+   centred on the 1440 frame whatever the logo does */
+.flow-steps {
+  position: absolute;
+  top: 24px;
+  left: 22.85%;
+  right: 22.85%;
+  padding: var(--spacing-3) var(--spacing-5);
+}
+
+/* Desktop names every step under its own bar, so the caption is mobile-only */
+.flow-steps__caption {
+  display: none;
+  margin: 0;
+}
+
+.flow-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-progress__step {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  min-width: 0;
+  max-width: 180px;
+}
+
+.flow-progress__label {
+  color: var(--colorTxtSrfPrimary);
+}
+.flow-progress__step + .flow-progress__step .flow-progress__label {
+  padding-inline: var(--spacing-2);
+}
+
+/* 4px inset on each side is what separates neighbouring bars — in the design
+   it is a border painted in the page colour */
+.flow-progress__bar {
+  height: 4px;
+  margin-inline: 4px;
+  border-radius: 16px;
+  background-color: var(--colorAccentPurple200);
+}
+.flow-progress__step.is-active .flow-progress__bar {
+  background-color: var(--colorAccentPurple500);
+}
+
+/* ---------------------------------------------------------------
+   Content — form card 800 + summary 420
+   --------------------------------------------------------------- */
+.flow-content {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--spacing-6);
+  padding: var(--spacing-7) var(--spacing-11);
+}
+
+.flow-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-7);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-8);
+  background-color: var(--colorBgSrfPrimary);
+}
+
+.flow-card--form {
+  flex: 0 0 auto;
+  width: 800px;
+}
+
+.flow-fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+}
+
+.flow-fields__row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-5);
+}
+
+.flow-fields__col {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  min-width: 0;
+}
+
+/* Input Date v1.0 keeps its own 220 beside the value field */
+.field--date {
+  flex: 0 0 220px;
+}
+
+/* ---------------------------------------------------------------
+   Summary
+   --------------------------------------------------------------- */
+.summary {
+  flex: 0 0 auto;
+  width: 420px;
+  overflow: clip;
+}
+
+.summary__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.summary__cell {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-7);
+}
+
+.summary__key {
+  flex: 1 1 0;
+  min-width: 0;
+  color: var(--colorTxtSrfSecondary);
+}
+
+.summary__value {
+  color: var(--colorTxtSrfPrimary);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Figma draws the stroke outside the 0-height line, so the rule must not add
+   a pixel to the card — hence a pseudo-element rather than a border */
+.summary__line {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  border: none;
+}
+.summary__line::before {
+  content: "";
+  position: absolute;
+  inset: -1px 0 auto 0;
+  height: 1px;
+  background-color: var(--colorBrdrSrfTertiary);
+}
+
+.summary__total {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  min-width: 0;
+}
+
+.summary__covered {
+  font-weight: 500;
+}
+
+.summary__price {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: right;
+}
+
+/* ---------------------------------------------------------------
+   Loading skeleton — frame 35670:120340, shown while a step comes up
+
+   Skeleton atom 2.0: an alpha/purple/8 block with a 240px highlight that
+   starts just off its left edge and sweeps across. The component's own
+   timing is not exposed through MCP (it lives in the shared library), so
+   the duration below is a starting value — change it in one place.
+   --------------------------------------------------------------- */
+.skeleton {
+  container-type: inline-size; /* so the sweep can measure its own track */
+  position: relative;
+  display: block;
+  border-radius: 4px;
+  background-color: var(--colorAlphaPurple8);
+  overflow: clip;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: -240px;
+  width: 240px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.7) 47.596%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  mix-blend-mode: soft-light;
+  animation: skeleton-sweep 1.4s linear infinite;
+}
+
+@keyframes skeleton-sweep {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100cqw + 240px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after {
+    animation: none;
+  }
+}
+
+.skeleton-card {
+  gap: 48px;
+}
+.skeleton-card--form {
+  flex: 0 0 auto;
+  width: 800px;
+  min-height: 548px;
+}
+.skeleton-card--summary {
+  flex: 0 0 auto;
+  gap: var(--spacing-5);
+  width: 420px;
+  min-height: 504px;
+}
+
+.skeleton-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skeleton-row {
+  display: flex;
+  gap: var(--spacing-5);
+}
+
+.skeleton-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+}
+
+.skeleton--line {
+  height: 24px;
+}
+.skeleton--line-short {
+  width: 240px;
+}
+.skeleton--line-summary {
+  width: 254px;
+}
+.skeleton--box {
+  flex: 1 1 0;
+  height: 200px;
+}
+.skeleton--tile {
+  height: 60px;
+}
+
+/* The step fades in where the skeleton stood */
+[data-step-content] {
+  animation: step-reveal 0.25s ease both;
+}
+
+@keyframes step-reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Flow footer v.1.0
+   --------------------------------------------------------------- */
+.flow-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 80px;
+  padding: var(--spacing-7) var(--spacing-5);
+}
+
+.flow-footer__link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding-block: var(--spacing-2);
+  color: var(--colorTxtSrfSecondary);
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------------
+   Small screens — no mobile frame for this step yet, so this only keeps
+   the screen usable: the two cards stack and the page padding shrinks.
+   --------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  /* Header-flow-v1.1 mobile (35670:120360): a 56px row with the logo centred,
+     then the progress block — one caption instead of per-step labels */
+  .flow-header {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 120px;
+    padding: 0;
+  }
+  .flow-header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: auto;
+    height: 56px;
+    padding: var(--spacing-5);
+  }
+  .flow-header__logo img {
+    position: relative;
+    top: 4px; /* the optical nudge moves onto the mark itself */
+  }
+  .flow-steps {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    padding: var(--spacing-5);
+  }
+  .flow-steps__caption {
+    display: block;
+    text-align: center;
+  }
+  .flow-progress__label {
+    display: none;
+  }
+  .flow-progress__step {
+    gap: 0;
+  }
+  .flow-content {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--spacing-5);
+  }
+  .flow-card--form,
+  .summary {
+    width: auto;
+  }
+  .flow-card {
+    padding: var(--spacing-7) var(--spacing-5);
+  }
+  .flow-fields__row {
+    flex-direction: column;
+  }
+  .field--date {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  /* The mobile skeleton frame has no summary card, and its second group is
+     two stacked tiles rather than a pair of tall boxes */
+  .skeleton-card--summary {
+    display: none;
+  }
+  .skeleton-card--form {
+    width: auto;
+    min-height: 0;
+    padding: var(--spacing-7) var(--spacing-6);
+  }
+  .skeleton-row {
+    flex-direction: column;
+  }
+  /* flex-basis 0 would now be measured down the column and flatten the box */
+  .skeleton--box {
+    flex: 0 0 auto;
+    height: 60px;
+  }
+}

@@ -1,0 +1,209 @@
+/* ---------------------------------------------------------------
+   Base layer: fonts, reset, typography scale
+   Typography values come from the Figma text styles:
+   Headings/heading-1        48/62 SemiBold
+   Paragraph/default-bold    18/28 SemiBold
+   Texts/text-medium         16/24 Medium
+   Texts/text-small-medium   14/20 Medium
+   --------------------------------------------------------------- */
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/PPNeueMontreal-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PP Neue Montreal";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/PPNeueMontreal-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PP Neue Montreal";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../assets/fonts/PPNeueMontreal-SemiBold.woff2") format("woff2");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--colorBgSrfPrimary);
+  color: var(--colorTxtSrfPrimary);
+  font-family: "PP Neue Montreal", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* A class that sets `display` would otherwise beat the UA rule for [hidden],
+   which is how the A/B harness takes a variant off the page */
+[hidden] {
+  display: none !important;
+}
+
+/* These carry a UA margin (figure/blockquote get 1em 40px) that breaks layout */
+figure,
+blockquote {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+.heading-1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.heading-2 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.heading-3 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.heading-4 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.heading-5 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.heading-6 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* Display/display-hero — only the variant B headline uses it */
+.display-hero {
+  margin: 0;
+  font-size: 72px;
+  line-height: 86px;
+  font-weight: 600;
+  letter-spacing: -1.44px;
+}
+
+.paragraph-large {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.paragraph-default {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.paragraph-default-bold {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.text-medium {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.text-small-medium {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.text-regular {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.text-small-regular {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.caption-regular {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  font-feature-settings: "lnum" 1, "pnum" 1;
+}
+
+.footnote-regular {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 400;
+  font-feature-settings: "lnum" 1, "pnum" 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Page grid: 1440 frame with 176px side margins -> 1088px content */
+.container {
+  width: 100%;
+  max-width: calc(1088px + 48px); /* content + page gutters */
+  margin-inline: auto;
+  padding-inline: 24px;
+}
