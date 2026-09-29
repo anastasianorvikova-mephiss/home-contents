@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QIC — Home Contents Insurance</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- ============================= Navbar v.2.0 ============================= -->
+  <header class="navbar">
+    <div class="navbar__links">
+      <button class="navbar__burger" type="button" aria-label="Menu" aria-expanded="false">
+        <img src="assets/img/icon-burger.svg" alt="" width="28" height="28">
+      </button>
+
+      <a class="navbar__logo" href="#" aria-label="QIC">
+        <img src="assets/img/logo.svg" alt="QIC" width="76" height="24">
+      </a>
+
+      <nav class="navbar__group" aria-label="Main">
+        <a class="navbar__link" href="#"><span class="navbar__link-label">Car</span></a>
+        <a class="navbar__link" href="#"><span class="navbar__link-label">Visitors</span></a>
+        <a class="navbar__link" href="#"><span class="navbar__link-label">Travel</span></a>
+        <button class="navbar__link" type="button" aria-expanded="false">
+          <span class="navbar__link-label">More</span>
+          <img class="navbar__link-arrow" src="assets/img/icon-navarrow.svg" alt="" width="16" height="16">
+        </button>
+        <span class="navbar__divider" role="presentation"></span>
+        <button class="navbar__link" type="button" aria-expanded="false">
+          <span class="navbar__link-label">City services</span>
+          <img class="navbar__link-arrow" src="assets/img/icon-navarrow.svg" alt="" width="16" height="16">
+        </button>
+      </nav>
+    </div>
+
+    <div class="navbar__actions">
+      <button class="btn btn--s btn--primary navbar__renew" type="button">
+        <img class="btn__icon" src="assets/img/icon-refresh.svg" alt="" width="20" height="20">
+        <span class="btn__content">Renew policy</span>
+      </button>
+
+      <button class="btn btn--s btn--outline btn--desktop-only" type="button" aria-expanded="false">
+        <img class="btn__icon" src="assets/img/icon-flash.svg" alt="" width="20" height="20">
+        <span class="btn__content">Claims</span>
+        <img class="btn__icon" src="assets/img/icon-chevron.svg" alt="" width="20" height="20">
+      </button>
+
+      <button class="btn btn--s btn--outline" type="button">
+        <img class="btn__icon" src="assets/img/icon-login.svg" alt="" width="20" height="20">
+        <span class="btn__content">Login</span>
+      </button>
+
+      <button class="btn btn--outline btn--icon-only" type="button" aria-label="Switch language">
+        <img class="btn__icon" src="assets/img/icon-language.svg" alt="" width="24" height="24">
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================== Hero — variant A ====================== -->
+    <!-- ====== Hero — frame 35952:150434 ====== -->
+    <section class="hero-c" id="hero" data-hero data-stages="75000,250000">
+      <div class="hero-c__inner">
+
+        <div class="hero-c__col">
+          <div class="hero-c__headline">
+            <h1 class="display-hero">Protect your home contents</h1>
+            <p class="paragraph-large hero-c__subtitle">Enter your home content value to get an insurance price</p>
+          </div>
+
+          <form class="hero-c__form" action="#" novalidate>
+            <div class="hero-c__steps" data-steps>
+
+              <div class="hero-c__step hero-c__step--value is-active" data-step="value">
+                <div class="hero-c__picker">
+                  <div class="hero-c__field">
+                    <span class="hero-c__currency">QAR</span>
+                    <input class="hero-c__amount" id="home-value" type="text" inputmode="numeric" value="40,000"
+                           data-amount aria-label="Home content value, QAR">
+                  </div>
+                  <div class="chips" role="group" aria-label="Quick picks">
+                    <button class="chip is-active" type="button" data-chip="40000">QAR 40,000</button>
+                    <button class="chip" type="button" data-chip="75000">QAR 75,000</button>
+                    <button class="chip" type="button" data-chip="250000">QAR 250,000</button>
+                    <button class="chip" type="button" data-chip="500000">QAR 500,000+</button>
+                  </div>
+                </div>
+
+                <div class="hero-c__alert" data-hint>
+                  <p class="text-small-medium hero-c__alert-text">
+                    <strong data-hint-lead>An average value for a studio:</strong><span data-hint-rest> a bed, a sofa, a TV, a fridge, a laptop, and a wardrobe of clothes</span>
+                  </p>
+                </div>
+
+                <button class="btn btn--s btn--primary hero-c__continue" type="button" data-step-next>
+                  <span class="btn__content">Continue</span>
+                  <img class="btn__icon" src="assets/img/icon-arrow-right.svg" alt="" width="20" height="20">
+                </button>
+              </div>
+
+              <div class="hero-c__step hero-c__step--phone" data-step="phone">
+                <div class="hero-c__phone">
+                  <div class="phone-field">
+                    <button class="phone-field__country" type="button" aria-label="Select country code">
+                      <span class="phone-field__flag"><img src="assets/img/flag-qa.svg" alt=""></span>
+                      <img class="phone-field__chevron" src="assets/img/icon-chevron-down-24.svg" alt="">
+                    </button>
+                    <div class="phone-field__body">
+                      <span class="phone-field__code">+974</span>
+                      <input class="phone-field__input" type="tel" inputmode="numeric" placeholder="0000 0000" maxlength="9" autocomplete="tel-national" aria-label="Phone number">
+                    </div>
+                  </div>
+                  <p class="text-small-regular field-error" data-phone-error hidden>Enter your 8-digit phone number to continue</p>
+                </div>
+
+                <div class="hero-c__actions">
+                  <button class="btn btn--s btn--outline" type="button" data-step-back>
+                    <span class="btn__content">Back</span>
+                  </button>
+                  <button class="btn btn--s btn--primary" type="submit">
+                    <span class="btn__content">Check your price</span>
+                    <img class="btn__icon" src="assets/img/icon-arrow-right.svg" alt="" width="20" height="20">
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <div class="hero-c__img">
+          <div class="hero-c__stage">
+            <div class="hero-c__shot hero-c__shot--studio is-active"><img src="assets/img/home-studio.png" alt="Studio apartment"></div>
+            <div class="hero-c__shot hero-c__shot--family"><img src="assets/img/home-family.png" alt="Family apartment"></div>
+            <div class="hero-c__shot hero-c__shot--villa"><img src="assets/img/home-villa.png" alt="Villa"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== Price for owners — frame 35904:68786 ====== -->
+    <section class="owners">
+      <div class="owners__text">
+        <h2 class="heading-3">Own the building? We cover the structure too</h2>
+        <p class="text-medium">Walls, roof, fittings, and everything inside. Request a callback to get the price</p>
+      </div>
+      <button class="btn btn--m btn--outline owners__cta" type="button" data-modal-open="building">
+        <span class="btn__content">Request a callback</span>
+        <img class="btn__icon" src="assets/img/icon-arrow-right-24-dark.svg" alt="" width="24" height="24">
+      </button>
+    </section>
+
+    <section class="tiles">
+      <div class="container tiles__inner">
+        <h2 class="heading-2 tiles__title">When you might need this the most</h2>
+
+        <div class="tiles__grid">
+
+          <div class="tiles__col">
+            <article class="case-card case-card--photo" data-h="638">
+              <img class="case-card__photo" src="assets/img/case-kitchen.png" alt="">
+              <div class="case-card__content">
+                <span class="marketing-badge">Damage to your items</span>
+                <div class="case-card__text">
+                  <h3 class="heading-3 case-card__title">Furniture or other belongings are missing or damaged</h3>
+                </div>
+              </div>
+            </article>
+
+            <article class="case-card case-card--secondary" data-h="360">
+              <div class="case-card__content">
+                <span class="marketing-badge">Temporary stay</span>
+                <div class="case-card__text">
+                  <h3 class="heading-3 case-card__title">Your flat needs renovations<br>after the water leaks</h3>
+                  <p class="text-medium case-card__desc">The apartment is unlivable and you need a<br>temporarily place to stay</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="case-card case-card--purple" data-h="440">
+              <div class="case-card__content">
+                <span class="marketing-badge">Damage to rented items</span>
+                <div class="case-card__text">
+                  <h3 class="heading-3 case-card__title">If you rent an apartment<br>and something is broken</h3>
+                </div>
+              </div>
+              <div class="case-card__media">
+                <img src="assets/img/case-moving.png" alt="">
+              </div>
+            </article>
+          </div>
+
+          <div class="tiles__col">
+            <article class="case-card case-card--secondary" data-h="278">
+              <div class="case-card__content">
+                <span class="marketing-badge">Items you carry add-on</span>
+                <div class="case-card__text">
+                  <h3 class="heading-3 case-card__title">You&rsquo;re away for a while</h3>
+                  <p class="text-medium case-card__desc">Belongings you carry stay protected even when you&rsquo;re abroad</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="case-card case-card--sun" data-h="588">
+              <div class="case-card__content">
+                <span class="marketing-badge">Building cover for owners</span>
+                <div class="case-card__text">
+                  <h3 class="heading-3 case-card__title">Your home&rsquo;s walls, roof, or structure are damaged and need repair</h3>
+                </div>
+              </div>
+              <div class="case-card__media">
+                <img src="assets/img/case-villa.png" alt="">
+              </div>
+            </article>
+
+            <article class="case-card case-card--secondary" data-h="278">
+              <div class="case-card__content">
+                <span class="marketing-badge">Accidental damage add-on</span>
+                <div class="case-card__text">
+                  <h3 class="heading-3 case-card__title">Pet knocks over TV</h3>
+                  <p class="text-medium case-card__desc">Playtime can get expensive when the TV falls</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="case-card case-card--secondary" data-h="278">
+              <div class="case-card__content">
+                <span class="marketing-badge">Damage to your items</span>
+                <div class="case-card__text">
+                  <h3 class="heading-3 case-card__title">Jewelry, pictures, fine art<br>missing after theft</h3>
+                  <p class="text-medium case-card__desc">Thieves break in and take the jewelry box from the bedroom</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Tiles v.1.0 — what's covered ===================== -->
+    <section class="covers">
+      <div class="container covers__inner">
+        <h2 class="heading-2 covers__title">What&apos;s covered</h2>
+
+        <div class="covers__grid">
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-contents.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Damage to rented items</h3>
+              </div>
+              <p class="paragraph-default cover-card__desc">Protects you from financial responsibility if the landlord&rsquo;s property is damaged</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-vase.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Damage to your items</h3>
+              </div>
+              <p class="paragraph-default cover-card__desc">Covers personal belongings you keep at home, such as jewelry, electronics, and collections</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-stay.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Temporary stay</h3>
+              </div>
+              <p class="paragraph-default cover-card__desc">If your home is unlivable, we&rsquo;ll partially cover a stay elsewhere</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-guests.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Guests&rsquo; belongings</h3>
+              </div>
+              <p class="paragraph-default cover-card__desc">Protects visitors&rsquo; items, like phones and other devices</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-mirror.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Mirror damage</h3>
+              </div>
+              <p class="paragraph-default cover-card__desc">Includes all types except hand mirrors</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-disaster.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Disaster protection</h3>
+              </div>
+              <p class="paragraph-default cover-card__desc">Covers damage caused by external events like fire, natural disasters, theft, and riots</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-away.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Away-from-home valuables</h3>
+              </div>
+              <p class="paragraph-default cover-card__desc">Your belongings are covered even when they&rsquo;re outside your home, as long as they&rsquo;re in Qatar</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-domestic.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Domestic staff items</h3>
+              </div>
+              <p class="paragraph-default cover-card__desc">Covers household workers&rsquo; belongings within specified locations in Qatar</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-injury.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Policyholder injury</h3>
+              </div>
+              <p class="paragraph-default cover-card__desc">A one-time payment in case of an injury or loss of life</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-children.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Spouse or child injury</h3>
+                <span class="badge badge--brand">Add-on</span>
+              </div>
+              <p class="paragraph-default cover-card__desc">A one-time payment to support you in case of a spouse&rsquo;s or child&rsquo;s injury or loss of life</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-worldwide.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Items you carry</h3>
+                <span class="badge badge--brand">Add-on</span>
+              </div>
+              <p class="paragraph-default cover-card__desc">Covers items you take with you in Qatar and abroad</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+          <article class="cover-card">
+            <img class="cover-card__icon" src="assets/img/cover-accidental.svg" alt="" width="48" height="48">
+            <div class="cover-card__content">
+              <div class="cover-card__head">
+                <img class="cover-card__chevron" src="assets/img/icon-chevron-down-24.svg" alt="" width="24" height="24">
+                <h3 class="heading-5 cover-card__title">Accidental damage</h3>
+                <span class="badge badge--brand">Add-on</span>
+              </div>
+              <p class="paragraph-default cover-card__desc">Protects your valuable belongings from everyday accidents, not external events</p>
+            </div>
+            <span class="cover-card__glow"><img src="assets/img/cover-gradient.svg" alt=""></span>
+          </article>
+
+        </div>
+
+        <button class="btn btn--m btn--outline" type="button">
+          <img class="btn__icon" src="assets/img/icon-file.svg" alt="" width="24" height="24">
+          <span class="btn__content">Policy wordings</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================== New Claim — how to file ===================== -->
+    <section class="claim">
+      <div class="container claim__inner">
+        <h2 class="heading-2 claim__title">How to file a claim</h2>
+
+        <div class="claim__row">
+
+          <div class="claim-card claim-card--surface">
+            <div class="claim-card__art">
+              <img src="assets/img/illustration-documents.svg" alt="" width="296" height="167">
+            </div>
+            <div class="claim-card__text">
+              <h3 class="heading-3 claim-card__title">Prepare your documents</h3>
+              <p class="text-medium claim-card__desc">Collect reports, photos,<br>or other evidence of the accident</p>
+            </div>
+          </div>
+
+          <div class="claim-card claim-card--brand">
+            <div class="claim-card__body">
+              <div class="claim-card__heading">
+                <h3 class="heading-3">Submit your claim</h3>
+                <p class="paragraph-default">Follow our instructions and send us the claim form along with your documents</p>
+              </div>
+              <button class="btn btn--l btn--outline" type="button">
+                <span class="btn__content">See claim instructions</span>
+                <img class="btn__icon" src="assets/img/icon-arrow-right-24-dark.svg" alt="" width="24" height="24">
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Banners v.1.0 ===================== -->
+    <section class="promo">
+      <div class="container">
+        <div class="promo__card">
+          <div class="promo__text">
+            <h2 class="heading-2 promo__title">Get QIC App<br>to manage your policy</h2>
+            <div class="promo__qr">
+              <img src="assets/img/banner-qr.png" alt="QR code to download the QIC app" width="128" height="128">
+              <div class="promo__qr-body">
+                <p class="paragraph-default">Access and share your policy,<br>or get instant help on the go</p>
+                <button class="btn btn--s btn--outline" type="button">
+                  <span class="btn__content">Learn more</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <img class="promo__media" src="assets/img/banner-media.png" alt="" width="380" height="380">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Social proof — Why QIC ===================== -->
+    <section class="why">
+      <div class="container why__inner">
+        <h2 class="heading-2 why__title">Why QIC</h2>
+
+        <div class="why__row">
+          <div class="why-tile">
+            <img class="why-tile__badge" src="assets/img/why-1964.svg" alt="" width="200" height="200">
+            <p class="paragraph-default-bold why-tile__text">Keeping you safe<br>since 1964</p>
+          </div>
+          <div class="why-tile">
+            <img class="why-tile__badge" src="assets/img/why-2m.svg" alt="" width="200" height="200">
+            <p class="paragraph-default-bold why-tile__text">Customers<br>in GCC region</p>
+          </div>
+          <div class="why-tile">
+            <img class="why-tile__badge" src="assets/img/why-shield.svg" alt="" width="200" height="200">
+            <p class="paragraph-default-bold why-tile__text">Best Insurance Company Digital Transformation in Qatar</p>
+          </div>
+          <div class="why-tile">
+            <img class="why-tile__badge" src="assets/img/why-aaa.svg" alt="" width="200" height="200">
+            <p class="paragraph-default-bold why-tile__text">MSCI&rsquo;s<br>Highest ESG Award</p>
+          </div>
+        </div>
+
+        <button class="btn btn--m btn--outline btn--w270" type="button">
+          <span class="btn__content">Learn more</span>
+          <img class="btn__icon" src="assets/img/icon-arrow-right-24-btn.svg" alt="" width="24" height="24">
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================== Sliders — related articles ===================== -->
+    <section class="slider">
+      <div class="slider__body">
+        <div class="slider__head">
+          <h2 class="heading-3 slider__title">Related articles on home contents insurance</h2>
+          <div class="slider__controls">
+            <button class="slider__btn" type="button" data-slide="prev" aria-label="Previous articles">
+              <img src="assets/img/icon-chevron-left.svg" alt="" width="20" height="20">
+            </button>
+            <button class="slider__btn" type="button" data-slide="next" aria-label="Next articles">
+              <img src="assets/img/icon-chevron-right.svg" alt="" width="20" height="20">
+            </button>
+          </div>
+        </div>
+
+        <div class="slider__track">
+          <a class="article" href="#">
+            <span class="article__image"><img src="assets/img/article-1.png" alt=""></span>
+            <span class="article__meta">
+              <span class="text-small-regular article__time">6 mins to read</span>
+              <span class="text-regular article__title">What is travel insurance and how to get it in Qatar</span>
+            </span>
+          </a>
+          <a class="article" href="#">
+            <span class="article__image"><img src="assets/img/article-2.png" alt=""></span>
+            <span class="article__meta">
+              <span class="text-small-regular article__time">3 mins to read</span>
+              <span class="text-regular article__title">How to apply for a tourist Schengen visa from Qatar</span>
+            </span>
+          </a>
+          <a class="article" href="#">
+            <span class="article__image"><img src="assets/img/article-3.png" alt=""></span>
+            <span class="article__meta">
+              <span class="text-small-regular article__time">8 mins to read</span>
+              <span class="text-regular article__title">Where to go on a trip from Qatar depending on the year season</span>
+            </span>
+          </a>
+          <a class="article" href="#">
+            <span class="article__image"><img src="assets/img/article-1.png" alt=""></span>
+            <span class="article__meta">
+              <span class="text-small-regular article__time">4 mins to read</span>
+              <span class="text-regular article__title">Where to go on a trip from Qatar depending on the year season</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Social proof — reviews wall ===================== -->
+    <section class="proof">
+      <div class="container proof__body">
+        <div class="proof__head">
+          <h2 class="proof__title">Trusted by over 200,000<br>customers in Qatar</h2>
+          <div class="proof__rating">
+            <a class="text-medium proof__rating-text" href="#">4,7 rating based on 3,500 reviews on Google</a>
+            <div class="proof__stars" role="img" aria-label="Rated 4.7 out of 5">
+              <span class="proof__star"><img src="assets/img/star-lg.svg" alt=""></span>
+              <span class="proof__star"><img src="assets/img/star-lg.svg" alt=""></span>
+              <span class="proof__star"><img src="assets/img/star-lg.svg" alt=""></span>
+              <span class="proof__star"><img src="assets/img/star-lg.svg" alt=""></span>
+              <span class="proof__star"><img src="assets/img/star-lg-half.svg" alt=""></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proof__grid">
+          <div class="proof__col">
+            <figure class="review-card">
+              <div class="review-card__stars" role="img" aria-label="Rated 5 out of 5">
+                <img src="assets/img/star-1.svg" alt=""><img src="assets/img/star-2.svg" alt=""><img src="assets/img/star-3.svg" alt=""><img src="assets/img/star-4.svg" alt=""><img src="assets/img/star-1.svg" alt="">
+              </div>
+              <blockquote class="text-regular review-card__text">I recently purchased a travel insurance policy from Qatar Insurance Company (QIC), and I must say, I am extremely satisfied with their service</blockquote>
+              <figcaption class="review-card__author">
+                <span class="review-card__avatar"><img src="assets/img/av-baqir.png" alt=""></span>
+                <span class="review-card__meta">
+                  <span class="review-card__name">Muhammad Baqir</span>
+                  <span class="footnote-regular review-card__date">21 May 2024</span>
+                </span>
+                <img class="review-card__source" src="assets/img/icon-google.svg" alt="Google review">
+              </figcaption>
+            </figure>
+
+            <figure class="review-card review-card--brand">
+              <div class="review-card__logo"><img src="assets/img/logo-qtrcars.png" alt="QTRCars"></div>
+              <div class="review-card__group">
+                <blockquote class="paragraph-default review-card__quote">I want to express my gratitude for the exceptional service provided by QIC. I have always been impressed by the professionalism, dedication, and integrity shown by your team in handling my insurance needs</blockquote>
+                <figcaption class="review-card__author">
+                  <span class="review-card__avatar"><img src="assets/img/av-abdulaziz.png" alt=""></span>
+                  <span class="review-card__meta">
+                    <span class="review-card__name">Abdulaziz Khalid Buhusain</span>
+                    <span class="caption-regular review-card__role">QTRCars</span>
+                  </span>
+                </figcaption>
+              </div>
+            </figure>
+
+            <figure class="review-card">
+              <div class="review-card__stars" role="img" aria-label="Rated 4.5 out of 5">
+                <img src="assets/img/star-1.svg" alt=""><img src="assets/img/star-2.svg" alt=""><img src="assets/img/star-3.svg" alt=""><img src="assets/img/star-4.svg" alt=""><img src="assets/img/star-5.svg" alt="">
+              </div>
+              <blockquote class="text-regular review-card__text">One minute can complete the purchase online. The service for claim is also awesome. Only one week, I received the claimed payment</blockquote>
+              <figcaption class="review-card__author">
+                <span class="review-card__avatar"><img src="assets/img/av-sunny.png" alt=""></span>
+                <span class="review-card__meta">
+                  <span class="review-card__name">Sunny Chang</span>
+                  <span class="footnote-regular review-card__date">10 Oct 2024</span>
+                </span>
+                <img class="review-card__source" src="assets/img/icon-google.svg" alt="Google review">
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="proof__col">
+            <figure class="review-card review-card--brand">
+              <div class="review-card__logo"><img src="assets/img/logo-tiq.png" alt="This is Qatar"></div>
+              <div class="review-card__group">
+                <blockquote class="paragraph-default review-card__quote">Creating my insurance and managing it has become so convenient through the QIC APP. Just with a click of a button I can do everything without needing to have physical paperwork!</blockquote>
+                <figcaption class="review-card__author">
+                  <span class="review-card__avatar"><img src="assets/img/av-mohannad.png" alt=""></span>
+                  <span class="review-card__meta">
+                    <span class="review-card__name">Mohannad Ibrahim Bitar</span>
+                    <span class="caption-regular review-card__role">Owner @thisisqatar</span>
+                  </span>
+                </figcaption>
+              </div>
+            </figure>
+
+            <figure class="review-card">
+              <blockquote class="text-regular review-card__text">I had a great experience purchasing travel insurance from Qatar Insurance Company. The online process was quick and easy!</blockquote>
+              <figcaption class="review-card__author">
+                <span class="review-card__avatar"><img src="assets/img/av-zahid.png" alt=""></span>
+                <span class="review-card__meta">
+                  <span class="review-card__name">Zahid Hussain</span>
+                  <span class="footnote-regular review-card__date">7 Dec 2024</span>
+                </span>
+                <img class="review-card__source" src="assets/img/icon-instagram.svg" alt="Instagram review">
+              </figcaption>
+            </figure>
+
+            <figure class="review-card">
+              <div class="review-card__stars" role="img" aria-label="Rated 4.5 out of 5">
+                <img src="assets/img/star-1.svg" alt=""><img src="assets/img/star-2.svg" alt=""><img src="assets/img/star-3.svg" alt=""><img src="assets/img/star-4.svg" alt=""><img src="assets/img/star-5.svg" alt="">
+              </div>
+              <blockquote class="text-regular review-card__text">I have applied my insurance here and it was really amazing to know that this insurance company is a non-hassle and you are always getting a quick response from their staff</blockquote>
+              <figcaption class="review-card__author">
+                <span class="review-card__avatar"><img src="assets/img/av-rona.png" alt=""></span>
+                <span class="review-card__meta">
+                  <span class="review-card__name">Rona Junio</span>
+                  <span class="footnote-regular review-card__date">12 Jan 2024</span>
+                </span>
+                <img class="review-card__source" src="assets/img/icon-google.svg" alt="Google review">
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="proof__col">
+            <figure class="review-card">
+              <div class="review-card__stars" role="img" aria-label="Rated 4.5 out of 5">
+                <img src="assets/img/star-1.svg" alt=""><img src="assets/img/star-2.svg" alt=""><img src="assets/img/star-3.svg" alt=""><img src="assets/img/star-4.svg" alt=""><img src="assets/img/star-5.svg" alt="">
+              </div>
+              <blockquote class="text-regular review-card__text">One of the best insurance companies. Ahmad made it so easy and he is so dedicated to what he is doing, he is great add to the team</blockquote>
+              <figcaption class="review-card__author">
+                <span class="review-card__avatar"><img src="assets/img/av-tariq.png" alt=""></span>
+                <span class="review-card__meta">
+                  <span class="review-card__name">Tariq Saber</span>
+                  <span class="footnote-regular review-card__date">17 Mar 2025</span>
+                </span>
+                <img class="review-card__source" src="assets/img/icon-google.svg" alt="Google review">
+              </figcaption>
+            </figure>
+
+            <figure class="review-card review-card--brand">
+              <div class="review-card__group">
+                <blockquote class="paragraph-default review-card__quote">Whether you&rsquo;re traveling domestically or internationally, consider investing in travel insurance to ensure you&rsquo;re covered in case things don&rsquo;t go as planned</blockquote>
+                <figcaption class="review-card__author">
+                  <span class="review-card__avatar"><img src="assets/img/av-amal.png" alt=""></span>
+                  <span class="review-card__meta">
+                    <span class="review-card__name">Amal Abdulmalik</span>
+                    <span class="caption-regular review-card__role">Journalist, writer</span>
+                  </span>
+                </figcaption>
+              </div>
+            </figure>
+
+            <figure class="review-card">
+              <blockquote class="text-regular review-card__text">Very good company with easy access and fast processing of transactions online and through WhatsApp</blockquote>
+              <figcaption class="review-card__author">
+                <span class="review-card__avatar"><img src="assets/img/av-oufa.png" alt=""></span>
+                <span class="review-card__meta">
+                  <span class="review-card__name">Oufa Ghapn</span>
+                  <span class="footnote-regular review-card__date">30 Aug 2024</span>
+                </span>
+                <img class="review-card__source" src="assets/img/icon-instagram.svg" alt="Instagram review">
+              </figcaption>
+            </figure>
+
+            <figure class="review-card">
+              <blockquote class="text-regular review-card__text">Fast and reliable, in just less 5 mins i have insured</blockquote>
+              <figcaption class="review-card__author">
+                <span class="review-card__avatar"><img src="assets/img/av-arnold.png" alt=""></span>
+                <span class="review-card__meta">
+                  <span class="review-card__name">Arnold Aguas</span>
+                  <span class="footnote-regular review-card__date">25 Apr 2025</span>
+                </span>
+                <img class="review-card__source" src="assets/img/icon-instagram.svg" alt="Instagram review">
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <img class="proof__fade" src="assets/img/proof-fade.png" alt="">
+      </div>
+    </section>
+
+    <!-- ===================== FAQ v.1.0 ===================== -->
+    <section class="faq">
+      <div class="container faq__inner">
+        <h2 class="heading-2 faq__title">FAQs</h2>
+
+        <div class="faq__list">
+          <div class="faq-item is-open">
+            <button class="faq-item__head" type="button" aria-expanded="true">
+              <img class="faq-item__icon" src="assets/img/icon-minus-circle.svg" alt="" width="24" height="24">
+              <span class="faq-item__body">
+                <span class="text-medium faq-item__question">What is the difference between building coverage and home contents coverage?</span>
+                <span class="text-regular faq-item__answer">Building coverage, also known as Landlord insurance, protects the house or flat within a condo, including the construction and all permanently attached fixtures, such as balconies. Home Contents coverage, or Rental insurance, is designed for tenants and provides protection against damage to their personal belongings, such as furniture, home appliances, and personal items. It is important to note that Home Contents coverage doesn&rsquo;t cover the entire building or flat but solely focuses on the home contents. If you are a homeowner seeking to financially protect your property and belongings, you may consider comprehensive house insurance, which covers both the building and its contents.</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__head" type="button" aria-expanded="false">
+              <img class="faq-item__icon" src="assets/img/icon-plus-circle.svg" alt="" width="24" height="24">
+              <span class="faq-item__body">
+                <span class="text-medium faq-item__question">Is home insurance mandatory in Qatar?</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__head" type="button" aria-expanded="false">
+              <img class="faq-item__icon" src="assets/img/icon-plus-circle.svg" alt="" width="24" height="24">
+              <span class="faq-item__body">
+                <span class="text-medium faq-item__question">Does my home insurance cover damages to my real estate due to fire?</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__head" type="button" aria-expanded="false">
+              <img class="faq-item__icon" src="assets/img/icon-plus-circle.svg" alt="" width="24" height="24">
+              <span class="faq-item__body">
+                <span class="text-medium faq-item__question">Will I get covered for losses due to riots and acts of vandalism?</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__head" type="button" aria-expanded="false">
+              <img class="faq-item__icon" src="assets/img/icon-plus-circle.svg" alt="" width="24" height="24">
+              <span class="faq-item__body">
+                <span class="text-medium faq-item__question">Will my home insurance cover bursting or overflowing of water tank apparatus or pipe?</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__head" type="button" aria-expanded="false">
+              <img class="faq-item__icon" src="assets/img/icon-plus-circle.svg" alt="" width="24" height="24">
+              <span class="faq-item__body">
+                <span class="text-medium faq-item__question">Can my home contents insurance cover losses due to natural disasters?</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__head" type="button" aria-expanded="false">
+              <img class="faq-item__icon" src="assets/img/icon-plus-circle.svg" alt="" width="24" height="24">
+              <span class="faq-item__body">
+                <span class="text-medium faq-item__question">Does my home contents insurance cover my pets and livestock?</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn btn--m btn--outline btn--block" type="button">
+          <img class="btn__icon" src="assets/img/icon-arrow-down.svg" alt="" width="24" height="24">
+          <span class="btn__content">Show more</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer v.1.0 ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+
+      <div class="footer__top">
+        <div class="footer__support">
+          <h2 class="footer__support-title">Support</h2>
+          <div class="footer__support-actions">
+            <button class="btn btn--s btn--outline" type="button" aria-expanded="false">
+              <span class="btn__content">General questions</span>
+              <img class="btn__icon" src="assets/img/icon-chevron-sm.svg" alt="" width="20" height="20">
+            </button>
+            <button class="btn btn--s btn--outline" type="button" aria-expanded="false">
+              <span class="btn__content">Mandatory health insurance</span>
+              <img class="btn__icon" src="assets/img/icon-chevron-sm.svg" alt="" width="20" height="20">
+            </button>
+          </div>
+        </div>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><img src="assets/img/social-instagram.svg" alt=""></a>
+          <a href="#" aria-label="Facebook"><img src="assets/img/social-facebook.svg" alt=""></a>
+          <a href="#" aria-label="X"><img src="assets/img/social-x.svg" alt=""></a>
+          <a href="#" aria-label="LinkedIn"><img src="assets/img/social-linkedin.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div class="footer__content">
+        <div class="footer__cols">
+          <div class="footer__links">
+            <nav class="footer__col" aria-label="Insurance">
+              <h3 class="heading-5 footer__col-title">Insurance</h3>
+              <ul>
+                <li><a href="#">Car</a></li>
+                <li><a href="#">Travel outbound</a></li>
+                <li><a href="#">Travel Inbound</a></li>
+                <li><a href="#">Boat and yacht</a></li>
+                <li><a href="#">Home contents</a></li>
+                <li><a href="#">Personal accidents</a></li>
+                <li><a href="#">Business shield</a></li>
+                <li><a href="#">Golf</a></li>
+                <li><a href="#">Business insurance</a></li>
+                <li><a href="#">Visitors</a></li>
+                <li><a href="#">School fees protection</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Retirement</a></li>
+                <li><a href="#">Bill protect</a></li>
+                <li><a href="#">Gadget insurance</a></li>
+              </ul>
+            </nav>
+
+            <div class="footer__links-wrap">
+              <nav class="footer__col" aria-label="Claims">
+                <h3 class="heading-5 footer__col-title">Claims</h3>
+                <ul>
+                  <li><a href="#">Motor claims</a></li>
+                  <li><a href="#">Travel claims</a></li>
+                  <li><a href="#">Home claims</a></li>
+                  <li><a href="#">Boat and yacht claims</a></li>
+                  <li><a href="#">Personal accident claims</a></li>
+                  <li><a href="#">Track a claim</a></li>
+                  <li><a href="#">Salvage auction</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer__col" aria-label="Support">
+                <h3 class="heading-5 footer__col-title">Support</h3>
+                <ul>
+                  <li><a href="#">Installment payment</a></li>
+                  <li><a href="#">Manage policy</a></li>
+                  <li><a href="#">Insurance renewal</a></li>
+                  <li><a href="#">Feedback</a></li>
+                  <li><a href="#">Complaints</a></li>
+                  <li><a href="#">Sitemap</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer__col" aria-label="Company">
+                <h3 class="heading-5 footer__col-title">Company</h3>
+                <ul>
+                  <li><a href="#">About QIC</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Data privacy notice</a></li>
+                  <li><a href="#">Policy wordings</a></li>
+                  <li><a href="#">Fraud awareness</a></li>
+                  <li><a href="#">QIC Car Market</a></li>
+                  <li><a href="#">Insurance coins</a></li>
+                </ul>
+              </nav>
+
+              <nav class="footer__col" aria-label="Login">
+                <h3 class="heading-5 footer__col-title">Login</h3>
+                <ul>
+                  <li><a href="#">Customers</a></li>
+                  <li><a href="#">Employees</a></li>
+                  <li><a href="#">Brokers &amp; agents</a></li>
+                  <li><a href="#">Workshops</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="footer__qr">
+            <img src="assets/img/footer-qr.svg" alt="QR code to download the QIC app" width="100" height="100">
+            <div>
+              <h3 class="heading-5">Get QIC app</h3>
+              <p>Access your car policy wherever you want. Scan QR code to download</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="text-small-medium footer__seo">
+            <a href="#">Third Party Liability</a>
+            <a href="#">Comprehensive</a>
+            <a href="#">Schengen travel insurance</a>
+            <a href="#">Georgia travel insurance</a>
+            <a href="#">Turkey travel insurance</a>
+            <a href="#">USA travel insurance</a>
+            <a href="#">UK travel insurance</a>
+            <a href="#">Thailand travel insurance</a>
+            <a href="#">Canada travel insurance</a>
+            <a href="#">India Travel Insurance</a>
+            <a href="#">Philippines travel insurance</a>
+            <a href="#">Toyota car insurance</a>
+            <a href="#">BMW car insurance</a>
+            <a href="#">Hyundai car insurance</a>
+          </div>
+
+          <div class="footer__copy">
+            <p>Copyright &copy; All rights reserved QIC Group. Regulated by <a href="#">Qatar Central Bank</a></p>
+            <p>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ====== Callback request — hero, from QAR 500,000 (36016:192310) ====== -->
+  <div class="modal" id="callback-modal" data-modal="callback" hidden>
+    <button class="modal__scrim" type="button" tabindex="-1" aria-label="Close" data-modal-close></button>
+    <div class="modal__dialog" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="callback-modal-title">
+      <div class="modal__head">
+        <h2 class="heading-6 modal__title" id="callback-modal-title">Callback request</h2>
+        <button class="modal__close" type="button" aria-label="Close" data-modal-close>
+          <img src="assets/img/icon-x-close-24.svg" alt="" width="24" height="24">
+        </button>
+      </div>
+      <form class="modal__form" action="#" novalidate data-modal-form>
+        <section class="modal__pane" data-pane="details">
+          <div class="modal__body">
+            <div class="modal__group">
+              <div class="modal__group-head">
+                <h3 class="heading-6">What&rsquo;s your home contents value?</h3>
+              </div>
+            <div class="modal__picker">
+              <div class="field">
+                <div class="field__body">
+                  <div class="field__content">
+                    <label class="field__label" for="cb-contents">QAR</label>
+                    <input class="field__input" id="cb-contents" type="text" inputmode="numeric" placeholder=" " data-amount>
+                  </div>
+                </div>
+              </div>
+              <div class="chips" role="group" aria-label="Quick picks">
+                <button class="chip" type="button" data-chip="40000">QAR 40,000</button>
+                <button class="chip" type="button" data-chip="75000">QAR 75,000</button>
+                <button class="chip" type="button" data-chip="250000">QAR 250,000</button>
+                <button class="chip" type="button" data-chip="500000">QAR 500,000+</button>
+              </div>
+            </div>
+            </div>
+          <div class="modal__group modal__fields">
+            <div class="field">
+              <div class="field__body">
+                <div class="field__content">
+                  <label class="field__label" for="cb-address">Address and city</label>
+                  <input class="field__input" id="cb-address" type="text" placeholder=" " autocomplete="street-address">
+                </div>
+              </div>
+              <p class="text-small-regular field__caption">Example: Apartment 1, Building 2, Street 3, Zone 4, Doha</p>
+            </div>
+            <div class="modal__row">
+              <div class="modal__phone">
+                <div class="phone-field">
+                  <button class="phone-field__country" type="button" aria-label="Select country code" tabindex="-1">
+                    <span class="phone-field__flag"><img src="assets/img/flag-qa.svg" alt=""></span>
+                    <img class="phone-field__chevron" src="assets/img/icon-chevron-down-24.svg" alt="">
+                  </button>
+                  <div class="phone-field__body">
+                    <span class="phone-field__code">+974</span>
+                    <input class="phone-field__input" type="tel" inputmode="numeric" placeholder="0000 0000" maxlength="9" autocomplete="tel-national" aria-label="Phone number" data-phone>
+                  </div>
+                </div>
+                <p class="text-small-regular field-error" data-phone-error hidden>Enter your 8-digit phone number to continue</p>
+              </div>
+              <div class="field field--filled field--date modal__date">
+                <div class="field__body">
+                  <div class="field__content">
+                    <label class="field__label" for="cb-date">Policy start date</label>
+                    <span class="field__input field__input--static" data-date-text>&nbsp;</span>
+                  </div>
+                  <img class="field__icon" src="assets/img/icon-calendar-24.svg" alt="" width="24" height="24">
+                  <!-- The native control drives the value but is invisible: it
+                       renders the date in its own locale format, not the design's -->
+                  <input class="field__date" id="cb-date" type="date" data-date>
+                </div>
+                <p class="text-small-regular field__caption">Valid until <span data-valid-until></span></p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="modal__foot">
+            <button class="btn btn--l btn--primary" type="submit">
+              <span class="btn__content">Send</span>
+            </button>
+            <p class="text-small-regular modal__legal">By continuing, you agree to our <a href="#">Privacy Policy</a></p>
+          </div>
+        </section>
+        <section class="modal__pane" data-pane="success" hidden>
+          <div class="modal__success">
+            <span class="modal__badge">
+              <img src="assets/img/icon-check-36.svg" alt="" width="36" height="36">
+            </span>
+            <div class="modal__success-text">
+              <h3 class="heading-3">Your request received</h3>
+              <p class="text-regular">We&rsquo;ll contact you soon to gather more details about the property and finish the purchase</p>
+            </div>
+          </div>
+          <div class="modal__foot">
+            <button class="btn btn--l btn--outline" type="button" data-modal-close>
+              <span class="btn__content">Close</span>
+            </button>
+          </div>
+        </section>
+      </form>
+    </div>
+  </div>
+
+  <!-- ====== Callback request — building cover (35715:175762) ====== -->
+  <div class="modal" id="building-modal" data-modal="building" hidden>
+    <button class="modal__scrim" type="button" tabindex="-1" aria-label="Close" data-modal-close></button>
+    <div class="modal__dialog" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="building-modal-title">
+      <div class="modal__head">
+        <h2 class="heading-6 modal__title" id="building-modal-title">Callback request</h2>
+        <button class="modal__close" type="button" aria-label="Close" data-modal-close>
+          <img src="assets/img/icon-x-close-24.svg" alt="" width="24" height="24">
+        </button>
+      </div>
+      <div class="modal__stepper">
+        <div class="stepper">
+          <p class="text-small-medium stepper__label" data-stepper-label>Step 1: Property details</p>
+          <div class="stepper__track">
+            <div class="stepper__segment is-active" data-segment>
+              <span class="stepper__fill stepper__fill--next"></span>
+              <span class="stepper__fill"></span>
+            </div>
+            <div class="stepper__segment" data-segment>
+              <span class="stepper__fill stepper__fill--next"></span>
+              <span class="stepper__fill"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="modal__form" action="#" novalidate data-modal-form>
+        <section class="modal__pane" data-pane="property">
+          <div class="modal__body">
+            <div class="modal__group">
+              <div class="modal__group-head">
+                <h3 class="heading-6">What&rsquo;s your building&rsquo;s value?</h3>
+                <p class="text-medium">Without home contents</p>
+              </div>
+            <div class="modal__picker">
+              <div class="field">
+                <div class="field__body">
+                  <div class="field__content">
+                    <label class="field__label" for="bc-building">QAR</label>
+                    <input class="field__input" id="bc-building" type="text" inputmode="numeric" placeholder=" " data-amount>
+                  </div>
+                </div>
+              </div>
+              <div class="chips" role="group" aria-label="Quick picks">
+                <button class="chip" type="button" data-chip="40000">QAR 40,000</button>
+                <button class="chip" type="button" data-chip="75000">QAR 75,000</button>
+                <button class="chip" type="button" data-chip="250000">QAR 250,000</button>
+                <button class="chip" type="button" data-chip="500000">QAR 500,000+</button>
+              </div>
+            </div>
+            </div>
+            <div class="modal__group">
+              <div class="modal__group-head">
+                <h3 class="heading-6">What&rsquo;s your home contents value?</h3>
+              </div>
+            <div class="modal__picker">
+              <div class="field">
+                <div class="field__body">
+                  <div class="field__content">
+                    <label class="field__label" for="bc-contents">QAR</label>
+                    <input class="field__input" id="bc-contents" type="text" inputmode="numeric" placeholder=" " data-amount>
+                  </div>
+                </div>
+              </div>
+              <div class="chips" role="group" aria-label="Quick picks">
+                <button class="chip" type="button" data-chip="40000">QAR 40,000</button>
+                <button class="chip" type="button" data-chip="75000">QAR 75,000</button>
+                <button class="chip" type="button" data-chip="250000">QAR 250,000</button>
+                <button class="chip" type="button" data-chip="500000">QAR 500,000+</button>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="modal__foot">
+            <button class="btn btn--l btn--primary" type="button" data-modal-next>
+              <span class="btn__content">Continue</span>
+              <img class="btn__icon" src="assets/img/icon-arrow-right-24.svg" alt="" width="24" height="24">
+            </button>
+          </div>
+        </section>
+        <section class="modal__pane" data-pane="contacts" hidden>
+          <div class="modal__body">
+          <div class="modal__group modal__fields">
+            <div class="field">
+              <div class="field__body">
+                <div class="field__content">
+                  <label class="field__label" for="bc-address">Address and city</label>
+                  <input class="field__input" id="bc-address" type="text" placeholder=" " autocomplete="street-address">
+                </div>
+              </div>
+              <p class="text-small-regular field__caption">Example: Apartment 1, Building 2, Street 3, Zone 4, Doha</p>
+            </div>
+            <div class="modal__row">
+              <div class="modal__phone">
+                <div class="phone-field">
+                  <button class="phone-field__country" type="button" aria-label="Select country code" tabindex="-1">
+                    <span class="phone-field__flag"><img src="assets/img/flag-qa.svg" alt=""></span>
+                    <img class="phone-field__chevron" src="assets/img/icon-chevron-down-24.svg" alt="">
+                  </button>
+                  <div class="phone-field__body">
+                    <span class="phone-field__code">+974</span>
+                    <input class="phone-field__input" type="tel" inputmode="numeric" placeholder="0000 0000" maxlength="9" autocomplete="tel-national" aria-label="Phone number" data-phone>
+                  </div>
+                </div>
+                <p class="text-small-regular field-error" data-phone-error hidden>Enter your 8-digit phone number to continue</p>
+              </div>
+              <div class="field field--filled field--date modal__date">
+                <div class="field__body">
+                  <div class="field__content">
+                    <label class="field__label" for="bc-date">Policy start date</label>
+                    <span class="field__input field__input--static" data-date-text>&nbsp;</span>
+                  </div>
+                  <img class="field__icon" src="assets/img/icon-calendar-24.svg" alt="" width="24" height="24">
+                  <!-- The native control drives the value but is invisible: it
+                       renders the date in its own locale format, not the design's -->
+                  <input class="field__date" id="bc-date" type="date" data-date>
+                </div>
+                <p class="text-small-regular field__caption">Valid until <span data-valid-until></span></p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="modal__foot">
+            <button class="btn btn--l btn--primary" type="submit">
+              <span class="btn__content">Send</span>
+            </button>
+            <p class="text-small-regular modal__legal">By continuing, you agree to our <a href="#">Privacy Policy</a></p>
+          </div>
+        </section>
+        <section class="modal__pane" data-pane="success" hidden>
+          <div class="modal__success">
+            <span class="modal__badge">
+              <img src="assets/img/icon-check-36.svg" alt="" width="36" height="36">
+            </span>
+            <div class="modal__success-text">
+              <h3 class="heading-3">Your request received</h3>
+              <p class="text-regular">We&rsquo;ll contact you soon to gather more details about the property and finish the purchase</p>
+            </div>
+          </div>
+          <div class="modal__foot">
+            <button class="btn btn--l btn--outline" type="button" data-modal-close>
+              <span class="btn__content">Close</span>
+            </button>
+          </div>
+        </section>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/state.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
