@@ -123,11 +123,8 @@
   gap: var(--spacing-5);
 }
 
-.flow-fields__col {
-  display: flex;
+.flow-fields__value {
   flex: 1 1 0;
-  flex-direction: column;
-  gap: var(--spacing-3);
   min-width: 0;
 }
 
@@ -137,18 +134,34 @@
 }
 
 /* ---------------------------------------------------------------
-   Summary
+   Summary — 35961:180951. Total on top, the policy's numbers under a
+   rule, and the step's call to action at the foot.
    --------------------------------------------------------------- */
 .summary {
   flex: 0 0 auto;
+  /* the card stacks its blocks 20 apart, not the 24 the form card uses */
+  gap: var(--spacing-6);
   width: 420px;
   overflow: clip;
+}
+
+.summary__price {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  padding-top: var(--spacing-3);
+}
+.summary__price-label {
+  color: var(--colorTxtSrfSecondary);
+}
+.summary__price-value {
+  color: var(--colorTxtSrfPrimary);
 }
 
 .summary__list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-4);
+  gap: var(--spacing-2-5);
 }
 
 .summary__cell {
@@ -160,13 +173,25 @@
 .summary__key {
   flex: 1 1 0;
   min-width: 0;
-  color: var(--colorTxtSrfSecondary);
+  color: var(--colorTxtSrfTertiary);
 }
 
 .summary__value {
   color: var(--colorTxtSrfPrimary);
   text-align: right;
   white-space: nowrap;
+}
+
+/* Add-ons are picked on the Coverage step, so this cell holds a link */
+.summary__addons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2-5);
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--colorTxtSrfBrandPurple);
+  cursor: pointer;
 }
 
 /* Figma draws the stroke outside the 0-height line, so the rule must not add
@@ -184,24 +209,6 @@
   inset: -1px 0 auto 0;
   height: 1px;
   background-color: var(--colorBrdrSrfTertiary);
-}
-
-.summary__total {
-  display: flex;
-  flex: 1 1 0;
-  flex-direction: column;
-  gap: var(--spacing-2);
-  min-width: 0;
-}
-
-.summary__covered {
-  font-weight: 500;
-}
-
-.summary__price {
-  flex: 1 1 0;
-  min-width: 0;
-  text-align: right;
 }
 
 /* ---------------------------------------------------------------
@@ -379,17 +386,38 @@
   .flow-progress__step {
     gap: 0;
   }
+  /* Both cards run edge to edge, 10 apart — the gap the frame draws */
   .flow-content {
     flex-direction: column;
     align-items: stretch;
-    padding: var(--spacing-5);
+    /* the column starts under the header instead of centring in the slack */
+    justify-content: flex-start;
+    gap: 10px;
+    padding: var(--spacing-5) 0;
   }
   .flow-card--form,
   .summary {
     width: auto;
   }
   .flow-card {
-    padding: var(--spacing-7) var(--spacing-5);
+    padding: var(--spacing-7) var(--spacing-6);
+    border-radius: var(--radius-7);
+  }
+  .flow-card--form h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  /* The mobile frame drops the date's caption and shrinks the total */
+  .field--date .field__caption {
+    display: none;
+  }
+  .summary__price {
+    gap: var(--spacing-2);
+    padding-top: 0;
+  }
+  .summary__price-value {
+    font-size: 24px;
+    line-height: 32px;
   }
   .flow-fields__row {
     flex-direction: column;

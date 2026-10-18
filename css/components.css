@@ -345,19 +345,18 @@ button.badge:focus-visible {
 
 
 /* ---------------------------------------------------------------
-   Shared by the hero: the three renders and the phone field
+   Shared by the hero: the four renders and the phone field
    --------------------------------------------------------------- */
 
-/* The homes share one box and cross-fade between them. Each is a transparent
-   PNG on the same 880x733 canvas, so one crop places them all alike, and the
-   box they fill is whatever the hero gives them. */
+/* The homes share one box and cross-fade between them. All four are
+   transparent PNGs drawn edge to edge on the same 1.33 canvas, so one rule
+   places them alike and a bigger home simply fills more of the box. */
 .hero-c__shot {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* the studio render is zoomed past its box, as in the frame */
   opacity: 0;
   filter: blur(18px);
   transform: translate(-50%, -50%) scale(1.06);
@@ -369,30 +368,13 @@ button.badge:focus-visible {
   filter: blur(0);
   transform: translate(-50%, -50%) scale(1);
 }
-/* The two taller homes keep the studio's ratio to them */
-.hero-c__shot--family,
-.hero-c__shot--villa {
-  height: 105.5%;
-}
 
 .hero-c__shot img {
-  position: absolute;
   display: block;
-  max-width: none;
-}
-/* These two fill their box exactly; the studio is scaled up and offset */
-.hero-c__shot--family img,
-.hero-c__shot--villa img {
-  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-.hero-c__shot--studio img {
-  top: -13.87%;
-  left: -7.93%;
-  width: 115.95%;
-  height: 122.2%;
+  max-width: none;
+  object-fit: contain;
 }
 
 @media (prefers-reduced-motion: reduce) {

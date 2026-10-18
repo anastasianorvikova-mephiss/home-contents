@@ -17,14 +17,41 @@
 
   const state = QuoteState.read();
 
+  /* --- Continue, or a callback above the limit -------------------------
+     Raising the value past QAR 500,000 turns the step's primary button
+     into the outline Request a callback the landing shows, and it opens
+     the same dialog (frame 35961:182175). */
+  const form = document.querySelector('#property-form');
+  const cta = document.querySelector('[data-cta]');
+  const ctaLabel = cta.querySelector('.btn__content');
+  const ctaIcon = cta.querySelector('.btn__icon');
+
+  function paintCta() {
+    const over = value >= CALLBACK_FROM;
+    cta.classList.toggle('btn--primary', !over);
+    cta.classList.toggle('btn--outline', over);
+    ctaLabel.textContent = over ? 'Request a callback' : 'Continue';
+    ctaIcon.style.display = over ? 'none' : ''; // the frame drops the arrow
+  }
+
+  cta.addEventListener('click', () => {
+    if (value >= CALLBACK_FROM) {
+      openModal('callback', value);
+      return;
+    }
+    form.requestSubmit();
+  });
+
   /* --- Home contents value — carried over from the landing ------------- */
   const amount = document.querySelector('[data-contents-value]');
-  const format = (n) => n.toLocaleString('en-US');
-  // 50,000 is what the frame shows, so that is what a direct visit gets
-  let value = Number(state.value) > 0 ? Number(state.value) : 50000;
+  // The frame keeps the currency inside the value, next to the number
+  const format = (n) => `QAR ${n.toLocaleString('en-US')}`;
+  // 40,000 is what the frame shows, so that is what a direct visit gets
+  let value = Number(state.value) > 0 ? Number(state.value) : 40000;
 
   const paintValue = () => {
     amount.value = format(value);
+    paintCta();
   };
 
   // Group the thousands as the field is typed in, keeping the caret the same
@@ -104,10 +131,18 @@
     QuoteState.write({ address: address.value.trim() });
   });
 
-  /* --- Continue -------------------------------------------------------- */
   // Step 2 is not built yet, so this only banks what the step collected
-  document.querySelector('#property-form').addEventListener('submit', (event) => {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
     QuoteState.write({ value, address: address.value.trim(), startDate: dateInput.value });
   });
+
+  /* --- What the step quotes --------------------------------------------
+     The frames carry a fixed price with no formula behind it, so the demo
+     keeps their number; with no add-ons picked yet, the total is exactly
+     the cover that comes included. */
+  const PRICE = 2040;
+  const money = (n) => `QAR ${n.toLocaleString('en-US')}`;
+  document.querySelector('[data-total]').textContent = money(PRICE);
+  document.querySelector('[data-cover]').textContent = money(PRICE);
 })();

@@ -82,20 +82,14 @@
         </div>
 
         <div class="flow-fields__row">
-          <div class="flow-fields__col">
-            <div class="field field--filled">
-              <div class="field__body">
-                <div class="field__content">
-                  <label class="field__label" for="contents-value">Home contents value, QAR</label>
-                  <input class="field__input" id="contents-value" type="text" inputmode="numeric"
-                         placeholder=" " value="50,000" data-contents-value>
-                </div>
+          <div class="field field--filled flow-fields__value">
+            <div class="field__body">
+              <div class="field__content">
+                <label class="field__label" for="contents-value">Home contents value</label>
+                <input class="field__input" id="contents-value" type="text" inputmode="numeric"
+                       placeholder=" " value="QAR 40,000" data-contents-value>
               </div>
             </div>
-            <a class="link" href="#">
-              How do I understand the price
-              <img class="link__icon" src="assets/img/icon-info.svg" alt="" width="16" height="16">
-            </a>
           </div>
 
           <div class="field field--filled field--date">
@@ -116,28 +110,39 @@
       </div>
     </form>
 
-    <!-- ============================= Summary ============================= -->
+    <!-- ===================== Summary — 35961:180951 ===================== -->
     <aside class="flow-card summary">
-      <h2 class="heading-5">Home contents insurance</h2>
+      <div class="summary__price">
+        <p class="heading-6 summary__price-label">Total</p>
+        <p class="heading-3 summary__price-value" data-total></p>
+      </div>
+
+      <hr class="summary__line">
 
       <div class="summary__list">
         <div class="summary__cell">
           <span class="text-medium summary__key">Policy dates</span>
           <span class="text-medium summary__value" data-policy-dates></span>
         </div>
+        <div class="summary__cell">
+          <span class="text-medium summary__key">Inclusive cover</span>
+          <span class="text-medium summary__value" data-cover></span>
+        </div>
+        <div class="summary__cell">
+          <span class="text-medium summary__key">Add-ons</span>
+          <!-- Add-ons belong to the Coverage step, which is not built yet -->
+          <button class="summary__addons" type="button">
+            <img src="assets/img/icon-plus-circle-20.svg" alt="" width="20" height="20">
+            <span class="text-medium">Select</span>
+          </button>
+        </div>
       </div>
 
       <hr class="summary__line">
 
-      <div class="summary__cell summary__cell--total">
-        <div class="summary__total">
-          <span class="heading-6">Total price</span>
-          <a class="link summary__covered" href="index.html#covers">What&rsquo;s covered</a>
-        </div>
-        <span class="heading-6 summary__price">QAR 1,420</span>
-      </div>
-
-      <button class="btn btn--l btn--primary btn--block" type="submit" form="property-form">
+      <!-- From QAR 500,000 this turns into the callback request the landing
+           shows, and opens the same dialog -->
+      <button class="btn btn--l btn--primary btn--block summary__cta" type="button" data-cta>
         <span class="btn__content">Continue</span>
         <img class="btn__icon" src="assets/img/icon-arrow-right-24.svg" alt="" width="24" height="24">
       </button>
@@ -154,6 +159,7 @@
   </footer>
 
   <script src="js/state.js"></script>
+  <script src="js/modal.js"></script>
   <script src="js/flow.js"></script>
 </body>
 </html>
